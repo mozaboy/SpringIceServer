@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yujian.IceServer.demo.dao.ZBTypeDao">
+	<resultMap type="com.yujian.IceServer.demo.bean.ZBType" id="ZBTypeResultMap">
+		<id property="id" column="id" />
+		<result property="roomIds" column="room_ids" />
+		<result property="teamType" column="team_type" />
+		<result property="teamName" column="team_name" />
+		<result property="winCustomer" column="win_customer" />
+		<result property="winTrade" column="win_trade" />
+		<result property="serverId" column="server_id" />
+		<result property="delStatus" column="del_status"/>
+		<result property="dtCreateTime" column="dt_create_time"/>
+		<result property="creatUser" column="creat_user"/>
+		<result property="dtUpdateTime" column="dt_update_time"/>
+		<result property="updateUser" column="update_user"/>
+	</resultMap>
+
+  	
+  	<select id="getZBTypeById" resultMap="ZBTypeResultMap">
+    	SELECT * FROM t_zb_type where id = #{id}   	
+  	</select>
+    
+</mapper>
